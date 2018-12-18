@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Kanban board</title>
+	<link href="https://fonts.googleapis.com/css?family=Oswald:400,500,700" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="button-container">
+			<button class="btn-new-board">New Board</button>
+		</div>
+	</div>
+
+
+	<div class="overlay">
+    	<div class="confirm-modal">
+	    	<p>Are you sure you want to delete this board?</p>
+	    	<button class="btn-yes">Yes</button>
+			<button class="btn-no">Cancel</button>
+		</div>
+	</div>		
+	<script id="board-template" type="x-tmpl-mustache">
+	    <div id={{ id }} class="board">
+	        <h1>{{ name }}</h1>
+			<button class="create-column">Add a column</button>
+			<button class="btn-delete">X</button>
+		    <div class="column-container"></div>
+
+	    </div>
+	</script>
+	<script id="column-template" type="x-tmpl-mustache">
+	    <div class="column">
+	        <h2 class="column-title">{{ name }}</h2>
+	        <ul id={{ id }} class="column-card-list"></ul>
+	        <button class="btn-delete-col" title="Delete column">X</button>
+	        <button class="add-card">Add a card</button>
+	    </div>
+	</script>
+	<script id="card-template" type="x-tmpl-mustache">
+	  	<div class="card">
+		    <p class="card-description">{{ description }}</p>
+	    	<button class="btn-delete" title="Delete card">x</button>
+	  	</div>
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.6.0/Sortable.min.js"></script>	
+	<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

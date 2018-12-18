@@ -1,0 +1,104 @@
+body {
+	font-family: 'Oswald', sans-serif;
+	background: #0F2027;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	margin: 0 auto;
+}	
+
+.wrapper {
+	background: #E0EAFC;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	padding: 0 15px;
+	margin: 0 auto;
+	min-height: 100vh;
+	max-width: 1200px;
+	text-align: center;
+	position: relative;
+	button {
+		background-color: #284B59;
+		color: #FFF;
+		border: 2px solid #0F2028;
+		&:hover{
+			background-color: #fff;
+			color: #284B59;	
+		}
+	}
+	h1 {
+		text-transform: uppercase;
+	}
+	.button-container {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		button {
+			width: 100px;
+			height: 50px;
+		}
+		&.hide {
+			display: none;
+		}
+	}
+}
+.overlay {
+	display: none;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 10;
+	&.show {
+		display: flex;
+	}
+	.confirm-modal {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		min-height: 60px;
+		justify-content: center;
+		min-width: 250px;
+		border: 1px solid #AAA;
+		padding: 10px;
+		background-color: #E0EAFC;
+	}
+
+}
+.column-container {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	.column {
+		min-width: 250px;
+		border-left: 2px dashed #AAA;
+		border-right: 2px dashed #AAA;
+		min-height: 450px;
+		position: relative;
+		max-width: 400px;
+		.btn-delete-col {
+			position: absolute;
+			top: 0;
+			right: 2px;
+		}
+		ul {
+			min-height: 380px;
+			list-style-type: none;
+			padding: 0;
+			.card {
+				background-color: #fff;
+				border-radius: 2px;
+				border: 1px solid #AAA;
+				position: relative;
+				margin-bottom: 10px;
+				.btn-delete {
+					position: absolute;
+					top: 1px;
+					right: 1px;
+				}
+			}
+		}
+	}
+}
