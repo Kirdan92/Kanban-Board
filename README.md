@@ -1,1 +1,1 @@
-https://kirdan92.github.io/Task-15.1/
+https://kirdan92.github.io/Kanban-Board/
